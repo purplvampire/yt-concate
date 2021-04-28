@@ -8,7 +8,7 @@ class Step(ABC):
         pass
 
     @abstractmethod
-    def process(self, data, inputs):  # 用字典把要用的參數打包起來(inputs)
+    def process(self, data, inputs, utils):  # 用字典把要用的參數打包起來(inputs)
         pass
 
 
