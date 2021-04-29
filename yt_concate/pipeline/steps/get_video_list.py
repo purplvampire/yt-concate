@@ -16,10 +16,9 @@ class GetVideoList(Step):
 
         base_video_url = 'https://www.youtube.com/watch?v='
         base_search_url = 'https://www.googleapis.com/youtube/v3/search?'
+        search_page = f'key={API_KEY}&channelId={channel_id}&part=snippet,id&order=date&maxResults=25'
 
-        first_url = base_search_url + 'key={}&channelId={}&part=snippet,id&order=date&maxResults=25'.format(API_KEY,
-
-                                                                                              channel_id)
+        first_url = base_search_url + search_page
 
         video_links = []
         url = first_url
